@@ -1,17 +1,14 @@
-# TODO:
-# - add desktop and icon file for pilrcui.
 #
 Summary:	Palm OS resource compiler
 Summary(pl):	Kompilator zasobów dla Palm OS
 Name:		pilrc
-Version:	2.9
+Version:	3.2
 Release:	1
 License:	GPL
 Group:		Development/Building
-Source0:	http://www.ardiri.com/download/files/palm/%{name}_src.tgz
-# Source0-md5:	b3db60e532083d6f71b98529625769c3
-Patch0:		pilrc-make.patch
-URL:		http://www.ardiri.com/index.php?redir=palm&cat=pilrc
+Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	9a1e114c5fe1f6fa0ffbb742c4d8510e
+URL:		http://%{name}.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel
@@ -27,32 +24,20 @@ Programy dla komputerów z Palm OS trzymaj± wiele danych w tzw.
 zasobach wewn±trz pliku z programem. Pilrc jest programem niezbêdnym
 do tworzenia tych zasobów.
 
-%package gtk
-Summary:	Palm OS resource compiler (gtk+ version)
-Summary(pl):	Kompilator zasobów dla Palm OS (wersja gtk+)
-Group:		X11/Development/Tools
-
-%description gtk
-Version of pilrc with UI utilising GTK+.
-
-%description gtk -l pl
-Wersja pilrc pracuj±ca w ¶rodowisku graficznym GTK+.
-
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-rm -f missing acinclude.m4
+cd unix
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+cd ..
+./unix/%configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 %clean
@@ -62,7 +47,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.txt doc example
 %attr(755,root,root) %{_bindir}/pilrc
-
-%files gtk
-%defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/pilrcui
+%{_datadir}/%{name}
