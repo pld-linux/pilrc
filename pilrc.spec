@@ -1,4 +1,3 @@
-#
 Summary:	Palm OS resource compiler
 Summary(pl):	Kompilator zasobów dla Palm OS
 Name:		pilrc
@@ -6,9 +5,9 @@ Version:	3.2
 Release:	1
 License:	GPL
 Group:		Development/Building
-Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/pilrc/%{name}-%{version}.tar.gz
 # Source0-md5:	9a1e114c5fe1f6fa0ffbb742c4d8510e
-URL:		http://%{name}.sourceforge.net/
+URL:		http://pilrc.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel
@@ -38,7 +37,9 @@ cd ..
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
