@@ -1,3 +1,6 @@
+# TODO:
+# - add desktop and icon file for pilrcui.
+#
 Summary:	Palm OS resource compiler
 Summary(pl):	Kompilator zasobów dla Palm OS
 Name:		pilrc
@@ -39,7 +42,7 @@ Wersja pilrc pracuj±ca w ¶rodowisku graficznym GTK+.
 %patch0 -p1
 
 %build
-rm -f missing
+rm -f missing acinclude.m4
 %{__aclocal}
 %{__autoconf}
 %{__automake}
@@ -48,7 +51,6 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
