@@ -2,7 +2,7 @@ Summary:	Palm OS resource compiler
 Summary(pl):	Kompilator zasobów dla Palm OS
 Name:		pilrc
 Version:	3.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Building
 Source0:	http://dl.sourceforge.net/pilrc/%{name}-%{version}.tar.gz
