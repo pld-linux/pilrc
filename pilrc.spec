@@ -9,6 +9,7 @@ Release:	1
 License:	GPL
 Group:		Development/Building
 Source0:	http://www.ardiri.com/download/files/palm/%{name}_src.tgz
+# Source0-md5:	b3db60e532083d6f71b98529625769c3
 Patch0:		pilrc-make.patch
 URL:		http://www.ardiri.com/index.php?redir=palm&cat=pilrc
 BuildRequires:	autoconf
