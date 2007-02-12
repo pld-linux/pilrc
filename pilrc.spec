@@ -1,5 +1,5 @@
 Summary:	Palm OS resource compiler
-Summary(pl):	Kompilator zasobów dla Palm OS
+Summary(pl.UTF-8):   Kompilator zasobÃ³w dla Palm OS
 Name:		pilrc
 Version:	3.2
 Release:	2
@@ -19,10 +19,10 @@ Palm OS computers keep lots program data inside resources integrated
 into the program binary. Pilrc is essential program to create this
 resources.
 
-%description -l pl
-Programy dla komputerów z Palm OS trzymaj± wiele danych w tzw.
-zasobach wewn±trz pliku z programem. Pilrc jest programem niezbêdnym
-do tworzenia tych zasobów.
+%description -l pl.UTF-8
+Programy dla komputerÃ³w z Palm OS trzymajÄ… wiele danych w tzw.
+zasobach wewnÄ…trz pliku z programem. Pilrc jest programem niezbÄ™dnym
+do tworzenia tych zasobÃ³w.
 
 %prep
 %setup -q
